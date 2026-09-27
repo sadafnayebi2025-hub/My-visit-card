@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sadaf Naeibi - Digital Business Card</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        /* ================================
+           Reset
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ================================
+           Body
+        ================================= */
+
+        body {
+            background-color: #FAF6EE;
+            color: #4A3E3D;
+
+            font-family: 'Plus Jakarta Sans', sans-serif;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+
+        /* ================================
+           Main Container
+        ================================= */
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        /* ================================
+           Welcome
+        ================================= */
+
+        .welcome-title {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 2.8rem;
+            font-weight: 500;
+
+            color: #2D2322;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================================
+           Hero Image
+        ================================= */
+
+        .image-wrapper {
+            width: 100%;
+            max-width: 520px;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border: 3px solid #DDD1C1;
+
+            box-shadow:
+                0 10px 25px rgba(116, 91, 80, 0.12);
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        /* ================================
+           Personal Information
+        ================================= */
+
+        .profile-info {
+            margin-bottom: 35px;
+        }
+
+
+        .name {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 2.2rem;
+            font-weight: 500;
+
+            color: #2D2322;
+
+            margin-bottom: 10px;
+        }
+
+
+        .subtitle {
+            font-size: 1.15rem;
+
+            color: #8C7B75;
+
+            margin-bottom: 4px;
+        }
+
+
+        .university {
+            font-size: 1.1rem;
+
+            color: #8C7B75;
+        }
+
+
+        /* ================================
+           Specialties
+        ================================= */
+
+        .specialties-section {
+            width: 100%;
+
+            margin-bottom: 45px;
+        }
+
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 1.6rem;
+            font-weight: 500;
+
+            color: #2D2322;
+
+            margin-bottom: 18px;
+        }
+
+
+        .tags-container {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            max-width: 480px;
+
+            margin: 0 auto;
+        }
+
+
+        /* ================================
+           Skill Tags
+        ================================= */
+
+        .tag {
+            background-color: #9C7273;
+
+            color: #FFFFFF;
+
+            padding: 8px 18px;
+
+            border-radius: 20px;
+
+            font-size: 0.95rem;
+            font-weight: 500;
+            box-shadow:
+                0 4px 8px rgba(156, 114, 115, 0.2);
+
+            transition: transform 0.2s ease;
+        }
+
+
+        .tag:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* ================================
+           Footer
+        ================================= */
+
+        .footer {
+            width: 100%;
+            max-width: 480px;
+
+            border-top: 1px solid #EAE0D5;
+
+            padding-top: 25px;
+        }
+
+
+        .social-links {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .social-links a {
+            color: #7A6963;
+
+            text-decoration: none;
+
+            font-size: 1rem;
+
+            transition: color 0.2s ease;
+        }
+
+
+        .social-links a:hover {
+            color: #2D2322;
+        }
+
+
+        .dot {
+            color: #B0A29A;
+
+            font-size: 0.8rem;
+        }
+
+
+        .copyright {
+            font-size: 0.85rem;
+
+            color: #9E8E87;
+        }
+
+
+        /* ================================
+           Mobile
+        ================================= */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 30px 15px;
+            }
+
+
+            .welcome-title {
+                font-size: 2.2rem;
+            }
+
+
+            .name {
+                font-size: 1.8rem;
+            }
+
+
+            .subtitle,
+            .university {
+                font-size: 1rem;
+            }
+
+
+            .tag {
+                font-size: 0.85rem;
+
+                padding: 6px 14px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+
+        <!-- Welcome -->
+
+        <h1 class="welcome-title">
+            Welcome
+        </h1>
+
+
+        <!-- Hero Image -->
+
+        <div class="image-wrapper">
+
+            <img src="hero.jpg" alt="Sadaf working on a website" class="hero-image">
+
+        </div>
+
+
+        <!-- Personal Information -->
+
+        <section class="profile-info">
+
+            <h2 class="name">
+                Sadaf Naeibi
+            </h2>
+
+            <p class="subtitle">
+                Computer Engineering Student
+            </p>
+
+            <p class="university">
+                Charkh Niloufar Azerbaijan University
+            </p>
+
+        </section>
+
+
+        <!-- Specialties -->
+
+        <section class="specialties-section">
+
+            <h3 class="section-title">
+                My Specialties
+            </h3>
+
+
+            <div class="tags-container">
+
+                <span class="tag">
+                    HTML
+                </span>
+
+                <span class="tag">
+                    CSS
+                </span>
+
+                <span class="tag">
+                    UI/UX
+                </span>
+
+                <span class="tag">
+                    WORDPRESS
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer class="footer">
+
+            <div class="social-links">
+
+                <a href="https://github.com" target="_blank">
+                    GitHub
+                </a>
+
+
+                <span class="dot">
+                    •
+                </span>
+
+
+                <a href="https://linkedin.com" target="_blank">
+                    LinkedIn
+                </a>
+
+
+                <span class="dot">
+                    •
+                </span>
+
+
+                <a href="mailto:example@email.com">
+                    Email
+                </a>
+
+            </div>
+
+
+            <p class="copyright">
+                © 2026 Sadaf
+            </p>
+
+        </footer>
+
+
+    </main>
+
+</body>
+
+</html>
